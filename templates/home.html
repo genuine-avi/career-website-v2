@@ -10,15 +10,23 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
   <div class="container">
   <body>
-     <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    {% include 'nav.html' %}
     <img class="img-fluid" id="banner" src="https://career-website--aviralsrivast27.repl.co/static/Career.jpg" >
-    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+     <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    <!-- <h2 class="text-center mt-2 mb-4">About Jovian</h2> -->
+    <div class="row">
+      <div class="col-md-7">
     <p class="lead" class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="d-none d-md-block col-md-5">
+        <img src="/static/hi'.jpg" style="height:320px;border-radius:4px">
+      </div>
     <h2 class="text-center mt-2 mb-4">Open Position</h2>
     <div>
       {% for job in jobs%}
@@ -28,9 +36,11 @@
     <!-- <p>
       {{jobs}}
     </p> -->
+    
     <div class="text-center">
-    <button class="btn btn-primary btn-lg" >Contact Us</button>
-      <p class="mt-4">Copyright 2023,Aviral</p>
+    <a href="mailto:avirals.ee20@rvce.edu.in?subject=Questions%20Job%20Openings&body=Your%20Question%20Is%20Related%20to%3A%3CType%20your%20Domain%3E" class="btn btn-primary btn-lg" >Contact Us</a>
+      <!-- <p class="mt-4">Copyright 2023,Aviral</p> -->
+      {% include 'footer.html' %}
     </div>
     </div>
   </body>
